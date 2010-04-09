@@ -144,7 +144,7 @@ class Pickler
         if user_override.to_s !~ /\A-?\z/
           user_override
         else
-          name.to_s.empty? ? id.to_s : name.gsub(/[^\w-]+/,'_').downcase
+          name.to_s.empty? ? id.to_s : "#{id.to_s}-"+name.gsub(/[^\w-]+/,'_').downcase
         end
       end
 
